@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image Manipulator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h2>
+            Change CSS Values with Vanilla<span class="highlight"
+                >JavaScript</span
+            >
+        </h2>
+        <div>
+            <label for="spacing">SPACING:</label>
+            <input
+                type="range"
+                name="spacing"
+                min="10"
+                max="200"
+                value="10"
+                data-sizing="px"
+            />
+            <label for="blur">BLUR:</label>
+            <input
+                type="range"
+                name="blur"
+                min="10"
+                max="25"
+                value="10"
+                data-sizing="px"
+            />
+            <label for="base">BASE-COLOR:</label>
+            <input type="color" name="base" value="#ff8200" />
+        </div>
+        <img
+            src="https://images.unsplash.com/photo-1616712565909-088feaf4fef7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80"
+            alt="drop of water"
+        />
+    </body>
+</html>
