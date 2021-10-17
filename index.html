@@ -8,10 +8,13 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h2 class="highlight">
-            Change CSS Values with Vanilla &nbsp;
-            <span class="highlight">JavaScript</span>
-        </h2>
+        <div class="title-container">
+            <h2 class="highlight">
+                CSS Value Sliders&nbsp;
+
+                <h3 class="sub-header">Built with Vanilla-JS</h3>
+            </h2>
+        </div>
         <div class="controls">
             <div>
                 <label class="highlight" for="padding">PADDING</label>
@@ -58,17 +61,6 @@
                 />
             </div>
             <div>
-                <label class="highlight" for="margin-bottom">MARGIN-BOTTOM</label>
-                <input
-                    type="range"
-                    name="margin-bottom"
-                    min="0"
-                    max="250"
-                    value="0"
-                    data-sizing="px"
-                />
-            </div>
-            <div>
                 <label class="highlight" for="margin-left">MARGIN-LEFT</label>
 
                 <input
@@ -92,7 +84,9 @@
                 />
             </div>
             <div>
-                <label class="highlight" for="border-radius">BORDER-RADIUS</label>
+                <label class="highlight" for="border-radius"
+                    >BORDER-RADIUS</label
+                >
                 <input
                     type="range"
                     name="border-radius"
@@ -103,13 +97,15 @@
                 />
             </div>
             <div>
-                <label class="highlight" for="base">Font & Image Background Color</label>
-                <input type="color" name="base" value="#969cb2" />
+                <label class="highlight" for="base"
+                    >Font & Image Background Color</label
+                >
+                <input type="color" name="base" value="#bbc3c6" />
             </div>
         </div>
         <div class="image-wrapper">
             <img
-                src="https://images.unsplash.com/photo-1616712565909-088feaf4fef7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80"
+                src="https://images.unsplash.com/photo-1471666875520-c75081f42081?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2472&q=80"
                 alt="drop of water"
                 width="50%"
                 height="50%"
@@ -117,11 +113,10 @@
         </div>
         <script>
             const inputs = document.querySelectorAll(".controls input");
-            const image = document.querySelector('img')
+            const image = document.querySelector("img");
 
             function handleUpdate() {
-
-                console.log(this)
+                console.log(this);
                 const suffix = this.dataset.sizing || "";
                 document.documentElement.style.setProperty(
                     `--${this.name}`,
@@ -129,7 +124,7 @@
                 );
             }
 
-            image.addEventListener("mouseover", handleUpdate)
+            image.addEventListener("mouseover", handleUpdate);
 
             inputs.forEach(input =>
                 input.addEventListener("change", handleUpdate)

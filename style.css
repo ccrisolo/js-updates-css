@@ -1,5 +1,5 @@
 :root {
-    --base: #969cb2;
+    --base: #00465f;
     --padding: 10px;
     --blur: 0px;
     --brightness: 100%;
@@ -14,7 +14,8 @@ body {
     /* height: 100vh;
     width: 100vw; */
     padding: auto;
-    background-image: url(https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1010&q=80);
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1499892477393-f675706cbe6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
 }
 
 h2 {
@@ -23,7 +24,14 @@ h2 {
     color: beige;
     display: flex;
     justify-content: center;
-    
+}
+
+.sub-header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 68, 101,);
+    display: flex;
+    justify-content: center;
+    padding: 0%;
 }
 
 .highlight {
@@ -42,6 +50,19 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 50%;
+    background-color: rgb(67, 164, 156, .3);
+    margin-left: 25%;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 
 label {
@@ -59,14 +80,16 @@ img {
     background: var(--base);
     filter: blur(var(--blur)) brightness(var(--brightness));
     border-radius: var(--border-radius);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 
-input[type=range]{
+input[type="range"] {
     -webkit-appearance: none;
     border-radius: 13px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
     width: 100px;
     height: 15px;
     background: #ddd;
@@ -74,7 +97,7 @@ input[type=range]::-webkit-slider-runnable-track {
     border-radius: 13px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
     height: 20px;
@@ -84,11 +107,10 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -3px;
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
     outline: none;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #ccc;
 }
-
